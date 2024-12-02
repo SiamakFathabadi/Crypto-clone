@@ -170,7 +170,7 @@ body {
 .mega_menu p {
     color: var(--light-clr);
     opacity: .6;
-    font-size: var(--font-xs-small);
+    font-size: var(--font-xx-small);
 }
 .coming_soon::after {
     content: 'coming soon';
