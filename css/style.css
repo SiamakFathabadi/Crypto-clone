@@ -9,9 +9,10 @@
 :root {
     --font-large: 4em;
     --font-medium: 2.5em;
-    --font-small: 1.2em;
+    --font-small: 1.1em;
     --font-xs-small: 0.9em;
-    --font-xx-small: 0.6em;
+    --font-xx-small: 0.7em;
+    --font-xxx-small: 0.5em;
 
     --first-clr: #795aa5;
     --second-clr: #1199FA;
@@ -40,7 +41,7 @@ body {
 /* start navbar */
 .navbar nav {
     width: 100%;
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,48 +49,55 @@ body {
     background-color: var(--bg-clr2);
     position: fixed;
 }
-.navbar nav div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.logo {
-    width: 70%;
-    height: 70%;
-}
-.navbar nav ul {
+.navbar nav > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
 }
-.navbar nav ul li {
+
+.logo {
+    width: 150px;
+    height: 70px;
+}
+.navbar nav > div > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.navbar nav > div > ul > li > p {
     color: var(--light-clr);
     opacity: .6;
     font-size: var(--font-xs-small);
-    line-height: 80px;
+    line-height: 70px;
     transition: all .3s ease-in-out;
-    /* background-color: var(--first-clr); */
 }
-.navbar nav ul li.level_up {
+.navbar nav ul li.level_up p {
     color: var(--second-clr) !important;
     opacity: 1 !important;
 }
-.navbar nav ul li span::after {
+.navbar nav ul li.level_up p a {
+    color: var(--second-clr) !important;
+}
+.navbar nav ul li p a::after {
     content: 'NEW';
     color: var(--light-clr);
     font-size: var(--font-xx-small);
     background-color: var(--second-clr);
-    line-height: 80px;
     padding: 5px 8px;
     border-radius: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
-.navbar nav ul li:hover {
+.navbar nav > div > ul > li > p:hover {
     cursor: pointer;
     opacity: 1;
+}
+.navbar nav button div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 .navbar nav button {
     border: 1.5px solid rgba(17, 153, 249, 0.5);
@@ -103,9 +111,76 @@ body {
     background-color: var(--hover-clr);
     cursor: pointer;
 }
-
+.geolocation {
+    width: 20px;
+    height: 20px;
+    opacity: .6;
+}
 .navbar img:hover {
     cursor: pointer;
+    opacity: 1;
 }
+
+/* start mega_menu */
+.mega_menu {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--bg-clr2);
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .3s ease-in-out;
+}
+.navbar nav > div > ul > li:hover > .mega_menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.mega_menu ul li {
+    padding: 10px 0;
+}
+.mega_menu h4 {
+    color: var(--light-clr);
+    font-size: var(--font-xs-small);
+    opacity: .6;
+}
+.mega_menu div {
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+.mega_menu h3 a {
+    color: var(--light-clr);
+    font-size: var(--font-small);
+}
+.mega_menu span {
+    color: var(--second-clr);
+    font-size: var(--font-xx-small);
+    font-weight: bolder;
+} 
+.mega_menu p {
+    color: var(--light-clr);
+    opacity: .6;
+    font-size: var(--font-xs-small);
+}
+.coming_soon::after {
+    content: 'coming soon';
+    color: var(--second-clr);
+    font-size: var(--font-xx-small);
+    background-color: rgba(17, 153, 249, 0.2);
+    padding: 3px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+/* end mega_menu */
 /* end navbar */
 /* end header */
