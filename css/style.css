@@ -35,6 +35,11 @@ body {
     font-family: Roboto, sans-serif;
     background-color: var(--bg-clr);
 }
+
+.fix_space {
+    height: 70px;
+    background-color: transparent;
+}
 /* end normalization */
 
 /* start header */
@@ -48,6 +53,9 @@ body {
     padding: var(--padding-totally);
     background-color: var(--bg-clr2);
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .navbar nav > div {
     display: flex;
@@ -106,6 +114,7 @@ body {
     background-color: var(--bg-clr);
     color: var(--light-clr);
     padding: 10px 15px;
+    outline: none;
 }
 .navbar nav button:hover {
     background-color: var(--hover-clr);
@@ -122,13 +131,28 @@ body {
 }
 
 /* start mega_menu */
+.under_mega_menu {
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    z-index: 99 !important;
+    backdrop-filter: blur(15px);
+    opacity: 0;
+    visibility: hidden;
+    
+    transition: all .3s ease-in-out;
+}
 .mega_menu {
     width: 100%;
     position: absolute;
     top: 70px;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 100 !important;
     background-color: var(--bg-clr2);
     padding: 20px 10%;
     display: flex;
@@ -140,6 +164,7 @@ body {
 
     transition: all .3s ease-in-out;
 }
+.navbar nav > div > ul > li:hover > .under_mega_menu ,
 .navbar nav > div > ul > li:hover > .mega_menu {
     opacity: 1 !important;
     visibility: visible !important;
@@ -183,4 +208,63 @@ body {
 }
 /* end mega_menu */
 /* end navbar */
+/* start hero_section  */
+.hero_items {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 250px;
+    z-index: 1 !important;
+}
+.hero_items h1 {
+    color: var(--light-clr);
+    font-size: var(--font-large);
+}
+.hero_items h2 {
+    color: var(--light-clr);
+    opacity: .6;
+    z-index: -1 ; /* ?//////////////////////////////////???? */
+}
+.hero_items > div > p {
+    color: var(--light-clr);
+    font-size: var(--font-small);
+    padding: 5px 0;
+    text-align: left;
+}
+.hero_items > div > p::before {
+    content: '✔';
+    background-color: var(--second-clr);
+    border-radius: 50%;
+    padding: 2px;
+    margin-right: 10px;
+} 
+.hero_items span {
+    color: var(--second-clr);
+    font-weight: bolder;
+}
+.hero_items button div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.hero_items button {
+    border: 1.5px solid var(--light-clr);
+    border-radius: 40px;
+    font-size: var(--font-small);
+    background-color: var(--bg-clr);
+    color: var(--light-clr);
+    padding: 10px 20px;
+    outline: none;
+}
+.hero_items button img {
+    width: 30px;
+    height: 30px;
+}
+.hero_items button:hover {
+    cursor: pointer;
+}
+/* end hero_section  */
 /* end header */
