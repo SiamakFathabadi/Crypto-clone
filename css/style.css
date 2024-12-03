@@ -698,4 +698,65 @@ main > p {
   cursor: pointer;
 }
 /* end defi */
+
+/* start cryptocurrency */
+.cryptocurrency {
+  padding: 100px 15%;
+  background-color: var(--bg-clr);
+  text-align: center;
+}
+.cryptocurrency > div {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.cryptocurrency > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cryptocurrency h3 {
+  color: var(--second-clr);
+  font-size: var(--font-medium);
+  padding-bottom: 20px;
+}
+.cryptocurrency h2 {
+  font-size: var(--font-large);
+  color: var(--light-clr);
+}
+.cryptocurrency img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+.cryptocurrency p {
+  font-size: var(--font-medium);
+  color: var(--light-clr);
+  /* line-height: 30px; */
+}
+.cryptocurrency h4 {
+  font-size: var(--font-large);
+  color: var(--second-clr);
+}
+.cryptocurrency button {
+  border: 1.5px solid var(--light-clr);
+  border-radius: 40px;
+  font-size: var(--font-small);
+  background-color: transparent;
+  color: var(--light-clr);
+  padding: 10px 40px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  margin-top: 60px;
+}
+.cryptocurrency button div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cryptocurrency button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* end cryptocurrency */
 /* end main */
