@@ -10,6 +10,7 @@
   --font-large: 4em;
   --font-medium: 2em;
   --font-pre-medium: 1.5em;
+  --font-small-medium: 1.3em;
   --font-small: 1.1em;
   --font-xs-small: 0.9em;
   --font-xx-small: 0.7em;
@@ -17,8 +18,8 @@
 
   --first-clr: #795aa5;
   --second-clr: #1199fa;
-  --third-clr: #1FB59F;
-  --fourth-clr: #ADB2CD;
+  --third-clr: #1fb59f;
+  --fourth-clr: #adb2cd;
 
   --bg-clr: #010118;
   --bg-clr2: #0b1426;
@@ -279,10 +280,10 @@ body {
   position: relative;
 
   /* ??????????????????????????????????????? */
-  transform-style: preserve-3d; 
-  perspective: 1200px; 
+  transform-style: preserve-3d;
+  perspective: 1200px;
   /* ??????????????????????????????????????? */
-  
+
   margin-bottom: 250px;
 }
 
@@ -295,8 +296,6 @@ body {
   transform: translateZ(0);
 
   transition: all 0.2s ease-out;
-  
-  
 }
 .hero_floating .under_hero_floating {
   width: 100%;
@@ -364,7 +363,7 @@ body {
 main > p {
   color: var(--light-clr);
   font-size: var(--font-xs-small);
-  opacity: .6;
+  opacity: 0.6;
   text-align: center;
   margin-top: 20px;
 }
@@ -384,7 +383,7 @@ main > p {
 
 /* start price */
 /* start price_items */
-.price_items  {
+.price_items {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -444,7 +443,7 @@ main > p {
 .price_card span {
   font-size: var(--font-small);
   color: var(--light-clr);
-  opacity: .6;
+  opacity: 0.6;
 }
 .price_card p {
   font-size: var(--font-medium);
@@ -477,4 +476,152 @@ main > p {
 }
 /* end price_table */
 /* end price */
+
+/* start crypto_journey */
+.crypto_journey {
+  margin: 100px auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.crypto_journey > h2 {
+  font-size: var(--font-large);
+  color: var(--light-clr);
+}
+.crypto_journey_cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+.price_alerts ,
+.recurring_buy {
+  grid-row: span 2;
+}
+.buy_crypto {
+  max-width: 500px;
+  max-height: 330px;
+}
+.crypto_journey_cards img {
+  width: 100%;
+  height: 100%;
+}
+.crypto_journey_card > div > h3 {
+  color: var(--second-clr);
+  font-size: var(--font-small-medium);
+  font-weight: bolder;
+}
+.crypto_journey_card > div > p {
+  color: var(--light-clr);
+  font-size: var(--font-small-medium);
+  margin-top: 10px;
+  line-height: 30px;
+}
+.crypto_journey_card {
+  padding: 40px 40px 0px 40px;
+  background: radial-gradient(
+      276.49% 100% at 50.11% 100%,
+      rgba(17, 153, 250, 0.4) 0%,
+      rgba(17, 153, 250, 0) 100%
+    ),
+    linear-gradient(0deg, rgba(1, 1, 24, 0.4) 0%, rgba(1, 1, 24, 0.4) 100%),
+    #002f61;
+  border-radius: 24px;
+}
+.on-chain,
+.buy_crypto {
+  display: flex;
+  justify-content: space-between;
+}
+.price_alerts ,
+.recurring_buy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.price_alerts_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(244, 244, 244, 0.3);
+  padding-bottom: 20px;
+}
+.last_card{
+  border: none !important;
+}
+.price_alerts_card > div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.price_alerts_card > div > div {
+  display: flex;
+  flex-direction: column;
+}
+.price_alerts_card div.coin_price {
+  align-items: end;
+}
+.price_alerts_card svg.coin {
+  transform: scale(1.5);
+}
+.price_alerts_card h6 {
+  color: var(--light-clr);
+  font-size: var(--font-small);
+  font-weight: bolder;
+}
+.price_alerts_card p {
+  color: var(--light-clr);
+  font-size: var(--font-xx-small);
+  opacity: .6;
+}
+.price_alerts_card h4 {
+  color: var(--light-clr);
+  font-size: var(--font-small);
+}
+.price_alerts_card h5 {
+  color: var(--third-clr);
+  font-size: var(--font-xx-small);
+}
+
+.join {
+  grid-column: span 2;
+  height: 100px;
+  border-radius: 24px;
+  background-color: var(--light-clr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-totally);
+}
+.join .qr_code {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.join div > p {
+  color: var(--dark-clr);
+  font-size: var(--font-small-medium);
+  font-weight: bolder;
+  text-align: center;
+  line-height: 30px;
+}
+.join div > h2 {
+  color: var(--dark-clr);
+  font-size: var(--font-medium);
+}
+.join div > h3 {
+  color: var(--dark-clr);
+  font-size: var(--font-pre-medium);
+  line-height: 30px;
+}
+.join span {
+  color: var(--second-clr);
+}
+.join img {
+  width: 20%;
+  height: 20%;
+}
+/* end crypto_journey */
 /* end main */
