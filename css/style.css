@@ -20,6 +20,7 @@
   --second-clr: #1199fa;
   --third-clr: #1fb59f;
   --fourth-clr: #adb2cd;
+  --fifth-clr: #00254F;
 
   --bg-clr: #010118;
   --bg-clr2: #0b1426;
@@ -319,17 +320,18 @@ body {
 /* start main */
 /* start crypto_basket */
 .crypto_basket {
-  margin: 0 auto;
-  height: 500px;
-  max-width: 1000px;
-  border-radius: 32px;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 0 10%;
   position: relative;
   cursor: pointer;
 }
 .crypto_basket img {
   width: 100%;
   height: 100%;
+  border-radius: 32px;
 }
 .crypto_basket_items {
   display: flex;
@@ -339,7 +341,7 @@ body {
   gap: 20px;
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 33%;
   transform: translate(-50%, -50%);
   z-index: 1;
   text-align: center;
@@ -479,8 +481,8 @@ main > p {
 
 /* start crypto_journey */
 .crypto_journey {
-  margin: 100px auto;
-  max-width: 1000px;
+  background-color: var(--bg-clr2);
+  padding: 100px 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -624,4 +626,76 @@ main > p {
   height: 20%;
 }
 /* end crypto_journey */
+
+/* start defi */
+.defi {
+  background-color: var(--light-clr);
+  padding: 100px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.defi img {
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+  /* image-orientation: center; */
+}
+.defi  h3 {
+  color: var(--fifth-clr);
+  font-size: var(--font-medium);
+  padding-bottom: 20px;
+}
+.defi  h2 {
+  font-size: var(--font-large);
+  color: var(--dark-clr);
+  padding-bottom: 20px;
+}
+.defi p {
+  font-size: var(--font-pre-medium);
+  color: var(--dark-clr);
+  line-height: 30px;
+}
+.defi span {
+  opacity: .6;
+}
+.defi div > div {
+  display: flex;
+  gap: 20px;
+}
+.defi button > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.defi .defi_btn1 {
+  border: 1.5px solid var(--fifth-clr);
+  border-radius: 40px;
+  font-size: var(--font-small);
+  background-color: transparent;
+  color: var(--fifth-clr);
+  padding: 10px 15px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  margin-top: 60px;
+}
+.defi .defi_btn1:hover {
+  cursor: pointer;
+  background-color: rgba(48, 43, 95, 0.2);
+}
+.defi .defi_btn2 {
+  border: 1.5px solid var(--fifth-clr);
+  border-radius: 40px;
+  font-size: var(--font-small);
+  background-color: var(--fifth-clr);
+  color: var(--light-clr);
+  padding: 10px 15px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  margin-top: 60px;
+}
+.defi .defi_btn2:hover {
+  cursor: pointer;
+}
+/* end defi */
 /* end main */
