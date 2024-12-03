@@ -8,7 +8,8 @@
 }
 :root {
   --font-large: 4em;
-  --font-medium: 2.5em;
+  --font-medium: 2em;
+  --font-pre-medium: 1.5em;
   --font-small: 1.1em;
   --font-xs-small: 0.9em;
   --font-xx-small: 0.7em;
@@ -16,8 +17,8 @@
 
   --first-clr: #795aa5;
   --second-clr: #1199fa;
-  --third-clr: #1199fa;
-  --fourth-clr: #ffffff;
+  --third-clr: #1FB59F;
+  --fourth-clr: #ADB2CD;
 
   --bg-clr: #010118;
   --bg-clr2: #0b1426;
@@ -282,6 +283,7 @@ body {
   perspective: 1200px; 
   /* ??????????????????????????????????????? */
   
+  margin-bottom: 250px;
 }
 
 .hero_floating img {
@@ -315,26 +317,164 @@ body {
 /* end hero_section  */
 /* end header */
 
+/* start main */
+/* start crypto_basket */
+.crypto_basket {
+  margin: 0 auto;
+  height: 500px;
+  max-width: 1000px;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.crypto_basket img {
+  width: 100%;
+  height: 100%;
+}
+.crypto_basket_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+}
+.crypto_basket_items h5 {
+  color: var(--second-clr);
+  font-size: var(--font-small);
+  font-weight: bolder;
+}
+.crypto_basket_items h2 {
+  color: var(--fourth-clr);
+  font-size: var(--font-large);
+  font-weight: bolder;
+}
 
-.container {
-    position: relative;
-    width: 300px;
-    height: 600px;
-    perspective: 1200px; /* Enable 3D perspective */
-  }
+.crypto_basket_items h3 {
+  color: var(--fourth-clr);
+  font-size: var(--font-medium);
+  font-weight: bolder;
+}
+main > p {
+  color: var(--light-clr);
+  font-size: var(--font-xs-small);
+  opacity: .6;
+  text-align: center;
+  margin-top: 20px;
+}
+.crypto_basket_items button {
+  border: 1.5px solid var(--light-clr);
+  border-radius: 40px;
+  font-size: var(--font-small);
+  background-color: var(--light-clr);
+  color: var(--bg-clr);
+  padding: 10px 40px;
+  outline: none;
+}
+.crypto_basket_items button:hover {
+  cursor: pointer;
+}
+/* end crypto_basket */
 
-  .phone {
-    width: 100%;
-    height: 100%;
-    background-image: url('https://mkt-site-asset.crypto.com/assets/app/phone/buy_and_sell_global.webp');
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    transform: translateZ(0);
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-  }
-
-  .container:hover .phone {
-    box-shadow: 0 30px 60px rgba(0, 255, 255, 0.4), 0 10px 20px rgba(0, 0, 0, 0.5);
-  }
+/* start price */
+/* start price_items */
+.price_items  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+  margin: 100px auto;
+}
+.price_items h3 {
+  color: var(--second-clr);
+  font-size: var(--font-small);
+  font-weight: bolder;
+}
+.price_items h2 {
+  color: var(--light-clr);
+  font-size: var(--font-large);
+}
+.price_items button {
+  border: 1.5px solid var(--light-clr);
+  border-radius: 40px;
+  font-size: var(--font-small);
+  background-color: transparent;
+  color: var(--light-clr);
+  padding: 10px 40px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+.price_items button div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.price_items button:hover {
+  background-color: var(--bg-clr2);
+  cursor: pointer;
+}
+/* end price_items */
+/* start price_table */
+.price .price_table {
+  padding: var(--padding-totally);
+  margin-bottom: 100px;
+}
+.price_table .price_card {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(244, 244, 244, 0.3);
+}
+.price_card a {
+  font-size: var(--font-pre-medium);
+  color: var(--light-clr);
+  font-weight: bolder;
+}
+.price_card span {
+  font-size: var(--font-small);
+  color: var(--light-clr);
+  opacity: .6;
+}
+.price_card p {
+  font-size: var(--font-medium);
+  color: var(--light-clr);
+  font-weight: bolder;
+}
+.price_card h6 {
+  font-size: var(--font-small);
+  color: var(--third-clr);
+}
+.price_card h5 {
+  font-size: var(--font-small);
+  color: var(--light-clr);
+}
+.price_card button {
+  border: 1.5px solid var(--light-clr);
+  border-radius: 40px;
+  font-size: var(--font-pre-medium);
+  background-color: var(--light-clr);
+  color: var(--bg-clr);
+  padding: 10px 24px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+.price_card button:hover {
+  border: 1.5px solid var(--second-clr);
+  background-color: transparent;
+  color: var(--light-clr);
+  cursor: pointer;
+}
+/* end price_table */
+/* end price */
+/* end main */
