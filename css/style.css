@@ -43,6 +43,10 @@ body {
   height: 70px;
   background-color: transparent;
 }
+
+.hide {
+  display: none;
+}
 /* end normalization */
 
 /* start header */
@@ -760,3 +764,71 @@ main > p {
 }
 /* end cryptocurrency */
 /* end main */
+
+/* start footer */
+footer {
+  background-color: var(--bg-clr2);
+  padding: var(--padding-totally);
+}
+/* start questions */
+.questions {
+  padding: 100px 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.questions h2 {
+  color: var(--light-clr);
+  font-size: var(--font-medium);
+  padding-top: 50px;
+  line-height: 40px;
+  letter-spacing: .2em;
+}
+.questions > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.questions > div > .questions_box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  border-bottom: 1px solid rgba(244, 244, 244, 0.3);
+  padding: 25px 0;
+  color: var(--light-clr);
+  font-size: var(--font-small);
+}
+.questions > div > .questions_box > .top {
+  display: flex;
+  justify-content: space-between;
+}
+.questions > div > div:hover {
+  cursor: pointer;
+}
+.questions h6 {
+  font-size: var(--font-xs-small);
+  color: var(--light-clr);
+  padding-top: 25px;
+}
+.questions p {
+  opacity: .7;
+  line-height: 30px;
+}
+.questions a {
+  color: var(--second-clr);
+  opacity: 1;
+}
+.questions_open div {
+  padding: 25px;
+}
+
+.questions_open {
+ /* height: 0px; */
+ /* opacity: 0; */
+ /* visibility: hidden; */
+ transition: all 0.3s ease-in-out;
+}
+
+/* end questions */
+/* end footer */
