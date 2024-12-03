@@ -809,7 +809,8 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-.questions > div > div:hover {
+.questions h3:hover,
+.questions svg:hover {
   cursor: pointer;
 }
 .questions h6 {
