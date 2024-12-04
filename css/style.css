@@ -839,7 +839,8 @@ footer {
 /* end questions */
 
 /* start information */
-.information > div {
+/* start information top*/
+.information > div.top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -865,6 +866,14 @@ footer {
   height: 105px;
   object-fit: contain;
 }
+/* end information top*/
+/* start information middle */
+.information > div.middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 5%;
+}
 .information div.middle {
   align-items: flex-start;
 }
@@ -874,12 +883,14 @@ footer {
   gap: 10px;
   padding: 10px 0;
 }
+
 .information h4 ,
 .information > div a {
-  color: var(--fourth-clr);
+  color: var(--light-clr);
   font-size: var(--font-xs-small);
+  opacity: .8;
 }
-.information >div span {
+.information > div span {
   color: var(--second-clr);
   font-size: var(--font-xx-small);
   padding: 10px 0;
@@ -916,16 +927,27 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  /* border: 1px solid rgba(244, 244, 244, 0.3); */
-  /* border-radius: 10px; */
 }
 .information .qr_code img {
   width: 150px;
   height: 150px;
   object-fit: contain;
+  padding-bottom: 20px;
 }
 .information .middle {
   border-bottom: 1px solid rgba(244, 244, 244, 0.3);
+}
+.news {
+  padding-top: 40px !important;
+}
+/* end information middle */
+/* start information bottom */
+.information > div.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+  padding: 20px 5%;
 }
 .bottom {
   border-bottom: 1px solid rgba(244, 244, 244, 0.3);
@@ -933,20 +955,27 @@ footer {
 .bottom img {
   width: 50px;
   height: 50px;
-  /* color: var(--fourth-clr); */
 }
 .bottom h5 {
-  color: var(--fourth-clr);
+  color: var(--light-clr);
   font-size: var(--font-xx-small);
   padding: 10px 0;
   line-height: 20px;
-  opacity: .6;
+  opacity: .8;
 }
-
+/* end information bottom */
+/* start information copy_right */
+.information > div.copy_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+}
 .copy_right h6 {
   font-size: var(--font-xx-small);
-  color: var(--fourth-clr);
-  opacity: .6;
+  color: var(--light-clr);
+  opacity: .8;
 }
+/* end information copy_right */
 /* end information */
 /* end footer */

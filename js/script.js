@@ -29,9 +29,9 @@ const SvgPlusEls = [...document.querySelectorAll(".plus")];
 const SvgMinusEls = [...document.querySelectorAll(".minus")];
 const questionsOpenEls = [...document.querySelectorAll(".questions_open")];
 
-console.log(questionsBoxesEl);
-console.log(SvgPlusEls);
-console.log(SvgMinusEls);
+// console.log(questionsBoxesEl);
+// console.log(SvgPlusEls);
+// console.log(SvgMinusEls);
 
 questionsBoxesEl.forEach((e, index) =>
   e.addEventListener("click", () => {
@@ -47,3 +47,21 @@ questionsBoxesEl.forEach((e, index) =>
   })
 );
 /* questions */
+
+/* scroll */
+const sectionEls = [...document.querySelectorAll("section")];
+
+console.log(sectionEls)
+console.log(sectionEls.slice(2,-2))
+sectionEls.slice(3).forEach(e=> console.log(e.children)) 
+
+
+
+// divEls.forEach((e) => ((e.getBoundingClientRect().top < trigger) e.classList.add('show')));
+// window.addEventListener('scroll', ()=>{
+//     const trigger = window.innerHeight*0.8;
+//     divEls.forEach((e) => ((e.getBoundingClientRect().top < trigger) ? e.classList.add('show') : e.classList.remove('show')));
+// if (window.innerHeight*0.8 > divEls.forEach((e) => e.getBoundingClientRect().top)) {
+
+// }
+// })
