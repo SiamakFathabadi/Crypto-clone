@@ -2,8 +2,9 @@
 /* scroll */
 const sectionEls = [...document.querySelectorAll("section")];
 
-console.log(sectionEls.slice(3, -2));
-sectionEls.slice(3, -2).forEach((e) => console.log(e.children));
+console.log(sectionEls);
+// console.log(sectionEls.slice(3, -2));
+// sectionEls.slice(3, -2).forEach((e) => console.log(e.children));
 sectionEls.slice(3, -2).forEach((e) => e.classList.add("fade-up"));
 window.addEventListener("scroll", () => {
   const trigger = window.innerHeight * 0.8;
