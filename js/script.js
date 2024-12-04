@@ -1,12 +1,30 @@
 "use strick";
+/* scroll */
+const sectionEls = [...document.querySelectorAll("section")];
+
+console.log(sectionEls.slice(3, -2));
+sectionEls.slice(3, -2).forEach((e) => console.log(e.children));
+sectionEls.slice(3, -2).forEach((e) => e.classList.add("fade-up"));
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.8;
+  sectionEls
+    .slice(3, -2)
+    .forEach((e) =>
+      e.getBoundingClientRect().top < trigger
+        ? e.classList.add("fade-up-show")
+        : e.classList.remove("fade-up-show")
+    );
+});
+/* scroll */
+
 /* hero_floating */
 const heroFloating = document.querySelector(".hero_floating");
 const phoneFloating = document.querySelector(".phone_floating");
 
-heroFloating.addEventListener("mousemove", (event) => {
+heroFloating.addEventListener("mousemove", (e) => {
   const rect = heroFloating.getBoundingClientRect();
-  const x = event.clientX - rect.left; // X position inside the container
-  const y = event.clientY - rect.top; // Y position inside the container
+  const x = e.clientX - rect.left; // X position inside the container
+  const y = e.clientY - rect.top; // Y position inside the container
 
   const centerX = rect.width / 2; // Center X of the container
   const centerY = rect.height / 2; // Center Y of the container
@@ -29,39 +47,18 @@ const SvgPlusEls = [...document.querySelectorAll(".plus")];
 const SvgMinusEls = [...document.querySelectorAll(".minus")];
 const questionsOpenEls = [...document.querySelectorAll(".questions_open")];
 
-// console.log(questionsBoxesEl);
-// console.log(SvgPlusEls);
-// console.log(SvgMinusEls);
-
 questionsBoxesEl.forEach((e, index) =>
   e.addEventListener("click", () => {
-    SvgPlusEls.forEach(
-      (e,ind) =>(ind == index)?e.classList.toggle('hide'):e.classList.remove('hide') 
+    SvgPlusEls.forEach((e, ind) =>
+      ind == index ? e.classList.toggle("hide") : e.classList.remove("hide")
     );
-    SvgMinusEls.forEach(
-      (e,ind) =>(ind == index)?e.classList.toggle('hide'):e.classList.add('hide') 
+    SvgMinusEls.forEach((e, ind) =>
+      ind == index ? e.classList.toggle("hide") : e.classList.add("hide")
     );
-    questionsOpenEls.forEach(
-      (e,ind) =>(ind == index)?e.classList.toggle('show'):e.classList.remove('show') 
+    questionsOpenEls.forEach((e, ind) =>
+      ind == index ? e.classList.toggle("show") : e.classList.remove("show")
     );
   })
 );
 /* questions */
 
-/* scroll */
-const sectionEls = [...document.querySelectorAll("section")];
-
-console.log(sectionEls)
-console.log(sectionEls.slice(2,-2))
-sectionEls.slice(3).forEach(e=> console.log(e.children)) 
-
-
-
-// divEls.forEach((e) => ((e.getBoundingClientRect().top < trigger) e.classList.add('show')));
-// window.addEventListener('scroll', ()=>{
-//     const trigger = window.innerHeight*0.8;
-//     divEls.forEach((e) => ((e.getBoundingClientRect().top < trigger) ? e.classList.add('show') : e.classList.remove('show')));
-// if (window.innerHeight*0.8 > divEls.forEach((e) => e.getBoundingClientRect().top)) {
-
-// }
-// })
