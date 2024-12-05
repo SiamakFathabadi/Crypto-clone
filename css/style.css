@@ -20,7 +20,7 @@
   --second-clr: #1199fa;
   --third-clr: #1fb59f;
   --fourth-clr: #adb2cd;
-  --fifth-clr: #00254F;
+  --fifth-clr: #00254f;
 
   --bg-clr: #010118;
   --bg-clr2: #0b1426;
@@ -65,25 +65,31 @@ body {
   transform: translateY(0) !important;
   /* transition: all 0.5s ease-in-out; */
 }
+.position-left {
+  left: 0 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 /* end normalization */
 
 /* start header */
 /* start responsive menu */
 .responsive_menu {
-/* width: 100%; */
-height: calc(100vh - 70px);
-background-color: var(--bg-clr2);
-overflow: scroll;
-border-top: 1px solid rgba(255, 255, 255, 0.1);
-padding: 5%;
+  height: calc(100vh - 70px);
+  background-color: var(--bg-clr2);
+  overflow: scroll;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5%;
 
-position: absolute;
-left: 120%; /* TODO */
-right: 0;
-top: 70px;
-z-index: 100;
+  position: absolute;
+  left: 200%;
+  right: 0;
+  top: 70px;
+  z-index: 100;
 
-display: none;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
 }
 .responsive_menu ul {
   padding: 20px 0;
@@ -105,7 +111,7 @@ display: none;
 #level_up {
   font-size: var(--font-medium);
 }
-#level_up a{
+#level_up a {
   color: var(--second-clr);
 }
 #level_up a::after {
@@ -129,22 +135,24 @@ display: none;
   color: var(--light-clr);
 }
 .down_menu_items h6 {
-  opacity: .6;
+  opacity: 0.6;
 }
 /* end responsive menu */
 
 /* start get_started */
 .get_started {
-  background-color: var(--bg-clr);
+  background-color: var(--bg-clr2);
   height: 70px;
 
   position: absolute;
   bottom: 0;
-  left: 120%;/* TODO */
+  left: 200%;
   right: 0;
   z-index: 1000;
 
-  display: none;
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
 }
 .get_started {
   display: flex;
@@ -168,7 +176,18 @@ display: none;
   cursor: pointer;
 }
 /* end get_started */
+
 /* start navbar */
+.close_icon {
+  width: 20px;
+  height: 20px;
+  display: none;
+  cursor: pointer;
+}
+.menu_icon,
+.lion_logo {
+  display: none;
+}
 .navbar nav {
   width: 100%;
   height: 70px;
@@ -445,7 +464,7 @@ display: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   padding: 0 10%;
   position: relative;
   cursor: pointer;
@@ -620,7 +639,7 @@ main > p {
   grid-template-rows: repeat(3, 1fr);
   gap: 20px;
 }
-.price_alerts ,
+.price_alerts,
 .recurring_buy {
   grid-row: span 2;
 }
@@ -659,7 +678,7 @@ main > p {
   display: flex;
   justify-content: space-between;
 }
-.price_alerts ,
+.price_alerts,
 .recurring_buy {
   display: flex;
   flex-direction: column;
@@ -672,7 +691,7 @@ main > p {
   border-bottom: 1px solid rgba(244, 244, 244, 0.3);
   padding-bottom: 20px;
 }
-.last_card{
+.last_card {
   border: none !important;
 }
 .price_alerts_card > div {
@@ -698,7 +717,7 @@ main > p {
 .price_alerts_card p {
   color: var(--light-clr);
   font-size: var(--font-xx-small);
-  opacity: .6;
+  opacity: 0.6;
 }
 .price_alerts_card h4 {
   color: var(--light-clr);
@@ -763,12 +782,12 @@ main > p {
   object-fit: contain;
   /* image-orientation: center; */
 }
-.defi  h3 {
+.defi h3 {
   color: var(--fifth-clr);
   font-size: var(--font-medium);
   padding-bottom: 20px;
 }
-.defi  h2 {
+.defi h2 {
   font-size: var(--font-large);
   color: var(--dark-clr);
   padding-bottom: 20px;
@@ -779,7 +798,7 @@ main > p {
   line-height: 30px;
 }
 .defi span {
-  opacity: .6;
+  opacity: 0.6;
 }
 .defi div > div {
   display: flex;
@@ -830,7 +849,6 @@ main > p {
 .cryptocurrency > div {
   display: flex;
   justify-content: space-between;
-  
 }
 .cryptocurrency > div > div {
   display: flex;
@@ -901,7 +919,7 @@ footer {
   font-size: var(--font-medium);
   padding-top: 50px;
   line-height: 40px;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
 }
 .questions > div {
   display: flex;
@@ -932,7 +950,7 @@ footer {
   padding-top: 25px;
 }
 .questions p {
-  opacity: .7;
+  opacity: 0.7;
   line-height: 30px;
 }
 .questions a {
@@ -944,9 +962,9 @@ footer {
 }
 
 .questions_open {
- height: 0px;
- opacity: 0;
- visibility: hidden;
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
 }
 /* end questions */
 
@@ -996,11 +1014,11 @@ footer {
   padding: 10px 0;
 }
 
-.information h4 ,
+.information h4,
 .information > div a {
   color: var(--light-clr);
   font-size: var(--font-xs-small);
-  opacity: .8;
+  opacity: 0.8;
 }
 .information > div span {
   color: var(--second-clr);
@@ -1015,7 +1033,7 @@ footer {
   padding: 10px 0;
   position: relative;
   transition: all 0.2s ease-in-out;
-} 
+}
 .information .v_line {
   width: 2px;
   height: 60px;
@@ -1026,7 +1044,7 @@ footer {
   cursor: pointer;
 }
 
-.information .first_list li:hover > p ,
+.information .first_list li:hover > p,
 .information .first_list li:hover > span {
   cursor: pointer;
   transform: translateX(10px);
@@ -1073,7 +1091,7 @@ footer {
   font-size: var(--font-xx-small);
   padding: 10px 0;
   line-height: 20px;
-  opacity: .8;
+  opacity: 0.8;
 }
 /* end information bottom */
 /* start information copy_right */
@@ -1086,7 +1104,7 @@ footer {
 .copy_right h6 {
   font-size: var(--font-xx-small);
   color: var(--light-clr);
-  opacity: .8;
+  opacity: 0.8;
 }
 /* end information copy_right */
 /* end information */
@@ -1095,3 +1113,32 @@ footer {
 /* start responsive */
 
 /* end responsive */
+@media screen and (max-width: 1130px) {
+  .menu_icon,
+  .logo {
+    display: none;
+  }
+  .lion_logo {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .menu_icon,
+  .logo {
+    display: block;
+  }
+  .geolocation,
+  .lion_logo {
+    display: none;
+  }
+  .navbar nav div ul {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .nav_btn p {
+    display: none;
+  }
+}

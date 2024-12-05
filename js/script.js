@@ -18,6 +18,29 @@ window.addEventListener("scroll", () => {
 });
 /* scroll */
 
+/* responsive menu */
+const responsiveMenuEl = document.querySelector(".responsive_menu");
+const getStartEl = document.querySelector(".get_started");
+const menuIconEl = document.querySelector(".menu_icon");
+const closeIconEl = document.querySelector(".close_icon");
+
+menuIconEl.addEventListener("click", () => {
+  menuIconEl.style.display = "none";
+  closeIconEl.style.display = "block";
+
+  responsiveMenuEl.classList.add("position-left");
+  getStartEl.classList.add("position-left");
+})
+
+closeIconEl.addEventListener("click", () => {
+  menuIconEl.style.display = "block"; /* TODO */
+  closeIconEl.style.display = "none";
+
+  responsiveMenuEl.classList.remove("position-left");
+  getStartEl.classList.remove("position-left");
+})
+/* responsive menu */
+
 /* hero_floating */
 const heroFloating = document.querySelector(".hero_floating");
 const phoneFloating = document.querySelector(".phone_floating");
