@@ -68,6 +68,106 @@ body {
 /* end normalization */
 
 /* start header */
+/* start responsive menu */
+.responsive_menu {
+/* width: 100%; */
+height: calc(100vh - 70px);
+background-color: var(--bg-clr2);
+overflow: scroll;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+padding: 5%;
+
+position: absolute;
+left: 120%; /* TODO */
+right: 0;
+top: 70px;
+z-index: 100;
+
+display: none;
+}
+.responsive_menu ul {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.responsive_menu ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--light-clr);
+}
+.responsive_menu ul li svg {
+  width: 25px;
+  height: 25px;
+}
+#level_up {
+  font-size: var(--font-medium);
+}
+#level_up a{
+  color: var(--second-clr);
+}
+#level_up a::after {
+  content: "NEW";
+  color: var(--light-clr);
+  font-size: 10px;
+  background-color: var(--second-clr);
+  padding: 5px 8px;
+  border-radius: 10px;
+  margin-left: 10px;
+  transform: scale(0.1) !important;
+}
+.menu_items {
+  font-size: var(--font-medium);
+}
+.down_menu_items {
+  font-size: var(--font-small-medium);
+  margin-bottom: 40px;
+}
+.down_menu_items a {
+  color: var(--light-clr);
+}
+.down_menu_items h6 {
+  opacity: .6;
+}
+/* end responsive menu */
+
+/* start get_started */
+.get_started {
+  background-color: var(--bg-clr);
+  height: 70px;
+
+  position: absolute;
+  bottom: 0;
+  left: 120%;/* TODO */
+  right: 0;
+  z-index: 1000;
+
+  display: none;
+}
+.get_started {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.get_started div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.get_started button {
+  text-align: center;
+  padding: 10px 100px;
+  background-color: var(--second-clr);
+  color: var(--light-clr);
+  border: none;
+  outline: none;
+  font-size: var(--font-small-medium);
+  border-radius: 30px;
+  cursor: pointer;
+}
+/* end get_started */
 /* start navbar */
 .navbar nav {
   width: 100%;
@@ -991,3 +1091,7 @@ footer {
 /* end information copy_right */
 /* end information */
 /* end footer */
+
+/* start responsive */
+
+/* end responsive */
