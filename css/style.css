@@ -8,6 +8,7 @@
 }
 :root {
   --font-large: 4em;
+  --font-medium-large: 3em;
   --font-medium: 2em;
   --font-pre-medium: 1.5em;
   --font-small-medium: 1.3em;
@@ -535,6 +536,7 @@ main > p {
 .crypto_journey > h2 {
   font-size: var(--font-large);
   color: var(--light-clr);
+  text-align: center;
 }
 .crypto_journey_cards {
   display: grid;
@@ -653,11 +655,11 @@ main > p {
   text-align: center;
   line-height: 30px;
 }
-.join div > h2 {
+.join div > h3 {
   color: var(--dark-clr);
   font-size: var(--font-medium);
 }
-.join div > h3 {
+.join div > h4 {
   color: var(--dark-clr);
   font-size: var(--font-pre-medium);
   line-height: 30px;
@@ -706,6 +708,8 @@ main > p {
 .defi div > div {
   display: flex;
   gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .defi button > div {
   display: flex;
@@ -817,7 +821,7 @@ footer {
   gap: 50px;
   border-bottom: 1px solid rgba(244, 244, 244, 0.3);
 }
-.questions h2 {
+.questions h4 {
   color: var(--light-clr);
   font-size: var(--font-medium);
   padding-top: 50px;
@@ -902,14 +906,14 @@ footer {
 /* end information top*/
 /* start information middle */
 .information > div.middle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  /* justify-content: space-between; */
+  /* align-items: center; */
   padding: 50px 5%;
+  /* align-items: flex-start; */
 }
-.information div.middle {
-  align-items: flex-start;
-}
+
 .information > div > ul > li {
   display: flex;
   align-items: center;
@@ -964,7 +968,7 @@ footer {
 .information .qr_code img {
   width: 150px;
   height: 150px;
-  object-fit: contain;
+  object-fit: fill;
   padding-bottom: 20px;
 }
 .information .middle {
@@ -979,7 +983,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 100px;
+  gap: 150px;
   padding: 20px 5%;
 }
 .bottom {
@@ -1230,11 +1234,59 @@ footer {
 }
 /* end mega_menu_responsive */
 @media screen and (max-width: 1130px) {
+  body {
+    font-size: 14px;
+  }
   .logo {
     display: none;
   }
   .lion_logo {
     display: block;
+  }
+  h1,h2 {
+    font-size: var(--font-medium-large) !important;
+  }
+  .hero_items {
+    margin-top: 150px;
+  }
+  .hero_items button {
+    display: none;
+  }
+  .hero_floating {
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+  
+  .price_table .price_card {
+    grid-template-columns: repeat(5,1fr);
+  }
+  .price_card button {
+    display: none;
+  }
+  
+  .join .qr_code {
+    display: none;
+  }
+  .defi div > div {
+    justify-content: center;
+  }
+  .defi .defi_btn1 {
+    display: none;
+  }
+
+  .questions {
+    flex-direction: column;
+  }
+  .questions h4 {
+    padding-top: 0;
+  }
+  .information > div.middle {
+    grid-template-columns: repeat(3,1fr);
+  }
+  .information .qr_code {
+    align-items: flex-start;
+    grid-column: 1/2 ;
+    grid-row: 2/3;
   }
 }
 
