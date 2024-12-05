@@ -25,16 +25,14 @@ const menuIconEl = document.querySelector(".menu_icon");
 const closeIconEl = document.querySelector(".close_icon");
 
 menuIconEl.addEventListener("click", () => {
-  menuIconEl.style.display = "none";
-  closeIconEl.style.display = "block";
+  
 
   responsiveMenuEl.classList.add("position-left");
   getStartEl.classList.add("position-left");
 })
 
 closeIconEl.addEventListener("click", () => {
-  menuIconEl.style.display = "block"; /* TODO */
-  closeIconEl.style.display = "none";
+ 
 
   responsiveMenuEl.classList.remove("position-left");
   getStartEl.classList.remove("position-left");
