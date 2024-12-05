@@ -19,24 +19,46 @@ window.addEventListener("scroll", () => {
 /* scroll */
 
 /* responsive menu */
+/* mega_menu_responsive */
 const responsiveMenuEl = document.querySelector(".responsive_menu");
+const responsiveMenuTitleEls = [
+  ...document.querySelectorAll(".responsive_menu .menu_items li"),
+];
 const getStartEl = document.querySelector(".get_started");
+
 const menuIconEl = document.querySelector(".menu_icon");
-const closeIconEl = document.querySelector(".close_icon");
+
+const closeIconEls = [...document.querySelectorAll(".close_icon")];
+const backIconEls = [...document.querySelectorAll(".back_icon")];
+
+const megaMenuResponsiveEls = [
+  ...document.querySelectorAll(".mega_menu_responsive"),
+];
 
 menuIconEl.addEventListener("click", () => {
-  
-
   responsiveMenuEl.classList.add("position-left");
   getStartEl.classList.add("position-left");
-})
+});
 
-closeIconEl.addEventListener("click", () => {
- 
+closeIconEls.forEach((e) =>
+  e.addEventListener("click", () => {
+    megaMenuResponsiveEls.forEach((e) => e.classList.remove("position-left"));
+    responsiveMenuEl.classList.remove("position-left");
+    getStartEl.classList.remove("position-left");
+  })
+);
 
-  responsiveMenuEl.classList.remove("position-left");
-  getStartEl.classList.remove("position-left");
-})
+responsiveMenuTitleEls.forEach((e, index) =>
+  e.addEventListener("click", () => {
+    megaMenuResponsiveEls[index].classList.add("position-left");
+  })
+);
+backIconEls.forEach((e, index) =>
+  e.addEventListener("click", () => {
+    megaMenuResponsiveEls[index].classList.remove("position-left");
+  })
+);
+/* mega_menu_responsive */
 /* responsive menu */
 
 /* hero_floating */
@@ -83,4 +105,3 @@ questionsBoxesEl.forEach((e, index) =>
   })
 );
 /* questions */
-
