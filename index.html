@@ -887,10 +887,14 @@
                             <!-- end mega_menu -->
                         </li>
                     </ul>
-                    <button class="nav_btn">
-                        <div>
+                    <button>
+                        <div class="nav_btn">
                             <p>Download App</p>
                             <img src="assets/images/navbar/qricon.svg" alt="QR code for app">
+                        </div>
+                        <div class="nav_btn_onclick hide">
+                            <p>Scan to Download</p>
+                            <img src="assets/images/footer information/qr_code.webp" alt="scan QR code for app">
                         </div>
                     </button>
                     <img src="assets/images/navbar/geolocation-thin.svg" alt="language" class="geolocation">
@@ -918,6 +922,9 @@
                         <img src="assets/images/navbar/qricon.svg" alt="QR code for app">
                     </div>
                 </button>
+                <div class="hero_items_qr hide">
+                    <img src="assets/images/footer information/qr_code.webp" alt="scan QR code for app">
+                </div>
             </div>
             <div class="hero_floating">
                 <div class='under_hero_floating'></div>
@@ -931,8 +938,10 @@
     <main>
         <!-- start crypto_basket -->
         <section class="crypto_basket">
-            <img src="assets/images/main crypto basket/hero-desktop.webp" alt="crypto basket new product" class="crypto_basket_main">
-            <img src="assets/images/main crypto basket/hero-mobile.webp" alt="crypto basket new product" class="crypto_basket_responsive">
+            <img src="assets/images/main crypto basket/hero-desktop.webp" alt="crypto basket new product"
+                class="crypto_basket_main">
+            <img src="assets/images/main crypto basket/hero-mobile.webp" alt="crypto basket new product"
+                class="crypto_basket_responsive">
             <div class="crypto_basket_items">
                 <h5>NEW PRODUCT</h5>
                 <h2>Crypto <br>
@@ -1072,7 +1081,7 @@
                         <h3>Recurring Buy</h3>
                         <p>Grow your portfolio automatically with daily, weekly, or monthly trades.</p>
                     </div>
-                    <div>
+                    <div class="recurring_buy_image">
                         <img src="assets/images/main crypto journey/recurring-buy.webp"
                             alt="phone with Crypto.com App open recurring buy page">
                     </div>
@@ -1082,182 +1091,183 @@
                         <h3>Price Alerts</h3>
                         <p>Be notified on BTC, ETH, XRP <br>prices, and more.</p>
                     </div>
-                    <div class="price_alerts_cards ">
-                        <div class="price_alerts_card">
-                            <div>
-                                <svg class='coin' width="1em" height="1em" viewBox="0 0 24 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M23.64 15.403c-1.602 6.428-8.114 10.34-14.544 8.738C2.669 22.538-1.244 16.027.359 9.598 1.962 3.17 8.473-.744 14.902.86c6.43 1.603 10.342 8.115 8.739 14.544z"
-                                        fill="#FF9D00"></path>
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M17.13 10.842c.232-1.548-.947-2.38-2.559-2.936l.523-2.097-1.276-.319-.51 2.043a53.28 53.28 0 00-1.022-.241l.512-2.056-1.276-.318L11 7.015a42.74 42.74 0 01-.815-.192l.001-.006-1.76-.44-.34 1.364s.947.217.927.23c.517.13.61.471.595.743l-.596 2.39c.036.008.082.021.133.042l-.043-.011-.092-.023-.835 3.347c-.063.158-.223.393-.585.304.013.018-.928-.232-.928-.232l-.634 1.461 1.662.415c.185.046.368.094.55.141l.36.094-.528 2.121 1.275.318.523-2.099c.348.095.687.182 1.018.264l-.522 2.09 1.277.318.528-2.118c2.177.412 3.814.246 4.504-1.723.555-1.586-.028-2.5-1.174-3.097.835-.192 1.463-.74 1.63-1.874zm-2.916 4.09c-.363 1.455-2.64.854-3.681.579a17.621 17.621 0 00-.249-.065l.701-2.81c.087.021.193.045.314.072 1.077.242 3.285.737 2.915 2.224zm-2.699-3.528c.869.232 2.763.737 3.093-.585.337-1.352-1.504-1.76-2.403-1.959a11.01 11.01 0 01-.264-.06l-.635 2.549.21.055z"
-                                        fill="currentColor"></path>
-                                </svg>
+                    <div>
+                        <div class="price_alerts_cards ">
+
+                            <div class="price_alerts_card">
                                 <div>
-                                    <h6>Bitcoin</h6>
-                                    <p>BTC</p>
+                                    <svg class='coin' width="1em" height="1em" viewBox="0 0 24 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M23.64 15.403c-1.602 6.428-8.114 10.34-14.544 8.738C2.669 22.538-1.244 16.027.359 9.598 1.962 3.17 8.473-.744 14.902.86c6.43 1.603 10.342 8.115 8.739 14.544z"
+                                            fill="#FF9D00"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M17.13 10.842c.232-1.548-.947-2.38-2.559-2.936l.523-2.097-1.276-.319-.51 2.043a53.28 53.28 0 00-1.022-.241l.512-2.056-1.276-.318L11 7.015a42.74 42.74 0 01-.815-.192l.001-.006-1.76-.44-.34 1.364s.947.217.927.23c.517.13.61.471.595.743l-.596 2.39c.036.008.082.021.133.042l-.043-.011-.092-.023-.835 3.347c-.063.158-.223.393-.585.304.013.018-.928-.232-.928-.232l-.634 1.461 1.662.415c.185.046.368.094.55.141l.36.094-.528 2.121 1.275.318.523-2.099c.348.095.687.182 1.018.264l-.522 2.09 1.277.318.528-2.118c2.177.412 3.814.246 4.504-1.723.555-1.586-.028-2.5-1.174-3.097.835-.192 1.463-.74 1.63-1.874zm-2.916 4.09c-.363 1.455-2.64.854-3.681.579a17.621 17.621 0 00-.249-.065l.701-2.81c.087.021.193.045.314.072 1.077.242 3.285.737 2.915 2.224zm-2.699-3.528c.869.232 2.763.737 3.093-.585.337-1.352-1.504-1.76-2.403-1.959a11.01 11.01 0 01-.264-.06l-.635 2.549.21.055z"
+                                            fill="currentColor"></path>
+                                    </svg>
+                                    <div>
+                                        <h6>Bitcoin</h6>
+                                        <p>BTC</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="coin_price">
-                                    <h4>$95,251.60</h4>
-                                    <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
-                                        </svg> 0.16%</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price_alerts_cards ">
-                        <div class="price_alerts_card">
-                            <div>
-                                <svg class="coin" width="1em" height="1em" viewBox="0 0 24 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12.5" r="12" fill="#607CF1"></circle>
-                                    <path d="M11.751 3.953l-.114.39v11.3l.114.114 5.246-3.1-5.246-8.704z"
-                                        fill="#B6CCFB"></path>
-                                    <path d="M11.751 3.953l-5.245 8.703 5.245 3.1V3.953z" fill="#F9FFFB"></path>
-                                    <path d="M11.751 16.75l-.064.079v4.025l.064.189L17 13.65 11.75 16.75z"
-                                        fill="#BCD7FF"></path>
-                                    <path d="M11.751 21.043V16.75l-5.245-3.1 5.245 7.393z" fill="#FBFEFF"></path>
-                                    <path d="M11.751 15.757l5.245-3.1-5.245-2.385v5.485z" fill="#7D99EA"></path>
-                                    <path d="M6.506 12.656l5.245 3.1v-5.484l-5.245 2.384z" fill="#C2CAF9"></path>
-                                </svg>
                                 <div>
-                                    <h6>Ethereum</h6>
-                                    <p>ETH</p>
+                                    <div class="coin_price">
+                                        <h4>$95,251.60</h4>
+                                        <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
+                                            </svg> 0.16%</h5>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <div class="coin_price">
-                                    <h4>$3,585.75</h4>
-                                    <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
-                                        </svg> 0.78%</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price_alerts_cards ">
-                        <div class="price_alerts_card">
-                            <div>
-                                <svg class="coin" width="1em" height="1em" viewBox="0 0 24 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="12" cy="12.5" r="12" fill="#607CF1"></circle>
-                                    <path d="M11.751 3.953l-.114.39v11.3l.114.114 5.246-3.1-5.246-8.704z"
-                                        fill="#B6CCFB"></path>
-                                    <path d="M11.751 3.953l-5.245 8.703 5.245 3.1V3.953z" fill="#F9FFFB"></path>
-                                    <path d="M11.751 16.75l-.064.079v4.025l.064.189L17 13.65 11.75 16.75z"
-                                        fill="#BCD7FF"></path>
-                                    <path d="M11.751 21.043V16.75l-5.245-3.1 5.245 7.393z" fill="#FBFEFF"></path>
-                                    <path d="M11.751 15.757l5.245-3.1-5.245-2.385v5.485z" fill="#7D99EA"></path>
-                                    <path d="M6.506 12.656l5.245 3.1v-5.484l-5.245 2.384z" fill="#C2CAF9"></path>
-                                </svg>
+
+
+                            <div class="price_alerts_card">
                                 <div>
-                                    <h6>Dogecoin</h6>
-                                    <p>DOGE</p>
+                                    <svg class="coin" width="1em" height="1em" viewBox="0 0 24 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12.5" r="12" fill="#607CF1"></circle>
+                                        <path d="M11.751 3.953l-.114.39v11.3l.114.114 5.246-3.1-5.246-8.704z"
+                                            fill="#B6CCFB"></path>
+                                        <path d="M11.751 3.953l-5.245 8.703 5.245 3.1V3.953z" fill="#F9FFFB"></path>
+                                        <path d="M11.751 16.75l-.064.079v4.025l.064.189L17 13.65 11.75 16.75z"
+                                            fill="#BCD7FF"></path>
+                                        <path d="M11.751 21.043V16.75l-5.245-3.1 5.245 7.393z" fill="#FBFEFF"></path>
+                                        <path d="M11.751 15.757l5.245-3.1-5.245-2.385v5.485z" fill="#7D99EA"></path>
+                                        <path d="M6.506 12.656l5.245 3.1v-5.484l-5.245 2.384z" fill="#C2CAF9"></path>
+                                    </svg>
+                                    <div>
+                                        <h6>Ethereum</h6>
+                                        <p>ETH</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="coin_price">
-                                    <h4>$0.410080</h4>
-                                    <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
-                                        </svg> 2.3%</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price_alerts_cards ">
-                        <div class="price_alerts_card">
-                            <div>
-                                <svg class="coin" width="1em" height="1em" viewBox="0 0 24 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#dot_svg__clip0_10116_96791)" fill="#E6007A">
-                                        <path
-                                            d="M11.999 5.534c2.542 0 4.602-1.127 4.602-2.517S14.541.5 12 .5C9.457.5 7.396 1.627 7.396 3.017S9.457 5.534 12 5.534zM11.999 24.498c2.542 0 4.602-1.127 4.602-2.517s-2.06-2.517-4.602-2.517c-2.542 0-4.603 1.127-4.603 2.517S9.457 24.498 12 24.498zM5.585 9.018c1.27-2.07 1.263-4.312-.019-5.007-1.28-.696-3.35.419-4.62 2.488-1.271 2.07-1.263 4.312.018 5.007 1.281.696 3.35-.418 4.62-2.488zM23.05 18.499c1.27-2.07 1.263-4.311-.017-5.006-1.28-.696-3.349.419-4.62 2.489-1.27 2.07-1.263 4.31.017 5.006 1.28.695 3.349-.42 4.62-2.49zM5.567 20.988c1.282-.696 1.29-2.938.019-5.008-1.271-2.07-3.34-3.183-4.62-2.488-1.282.696-1.29 2.937-.02 5.007 1.272 2.07 3.34 3.184 4.621 2.489zM23.035 11.507c1.28-.695 1.287-2.936.017-5.006-1.271-2.07-3.34-3.184-4.62-2.49-1.28.696-1.287 2.937-.017 5.007 1.271 2.07 3.34 3.184 4.62 2.489z">
-                                        </path>
-                                    </g>
-                                    <defs>
-                                        <clipPath id="dot_svg__clip0_10116_96791">
-                                            <rect y="0.5" width="24" height="24" rx="12" fill="currentColor"></rect>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
                                 <div>
-                                    <h6>Polkadot</h6>
-                                    <p>DOT</p>
+                                    <div class="coin_price">
+                                        <h4>$3,585.75</h4>
+                                        <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
+                                            </svg> 0.78%</h5>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <div class="coin_price">
-                                    <h4>$9.98</h4>
-                                    <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
-                                        </svg> 13.36%</h5>
+
+                            <div class="price_alerts_card">
+                                <div>
+                                    <svg class="coin" width="1em" height="1em" viewBox="0 0 24 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12.5" r="12" fill="#607CF1"></circle>
+                                        <path d="M11.751 3.953l-.114.39v11.3l.114.114 5.246-3.1-5.246-8.704z"
+                                            fill="#B6CCFB"></path>
+                                        <path d="M11.751 3.953l-5.245 8.703 5.245 3.1V3.953z" fill="#F9FFFB"></path>
+                                        <path d="M11.751 16.75l-.064.079v4.025l.064.189L17 13.65 11.75 16.75z"
+                                            fill="#BCD7FF"></path>
+                                        <path d="M11.751 21.043V16.75l-5.245-3.1 5.245 7.393z" fill="#FBFEFF"></path>
+                                        <path d="M11.751 15.757l5.245-3.1-5.245-2.385v5.485z" fill="#7D99EA"></path>
+                                        <path d="M6.506 12.656l5.245 3.1v-5.484l-5.245 2.384z" fill="#C2CAF9"></path>
+                                    </svg>
+                                    <div>
+                                        <h6>Dogecoin</h6>
+                                        <p>DOGE</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="coin_price">
+                                        <h4>$0.410080</h4>
+                                        <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
+                                            </svg> 2.3%</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="price_alerts_cards ">
-                        <div class="price_alerts_card last_card">
-                            <div>
-                                <svg class="coin" width="1em" height="1em" viewBox="0 0 24 25" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <rect y="0.5" width="24" height="24" rx="12" fill="currentColor"></rect>
-                                    <path
-                                        d="M12 .5l5.22 2.959L22.392 6.5l.048 6-.048 6-5.172 3.041L12 24.5l-5.22-2.959L1.608 18.5l-.048-6 .048-6L6.78 3.459 12 .5z"
-                                        fill="currentColor"></path>
-                                    <g clip-path="url(#cro_svg__clip0_10116_96806)">
-                                        <path
-                                            d="M12.003 1.958l-9.17 5.273v10.542l9.17 5.269 9.163-5.27V7.233l-9.163-5.274zm6.448 14.253l-6.448 3.707-6.452-3.707V8.79l6.452-3.708 6.448 3.708v7.42z"
-                                            fill="#002D74"></path>
-                                        <path
-                                            d="M12.003 23.042l9.163-5.27V7.233l-9.163-5.274v3.128l6.448 3.707v7.421l-6.448 3.704v3.124z"
-                                            fill="url(#cro_svg__paint0_linear_10116_96806)"
-                                            style="mix-blend-mode: multiply;"></path>
-                                        <path
-                                            d="M11.998 1.959L2.835 7.228v10.541l9.163 5.273v-3.128L5.55 16.207v-7.42l6.448-3.704V1.959z"
-                                            fill="url(#cro_svg__paint1_linear_10116_96806)"
-                                            style="mix-blend-mode: multiply;"></path>
-                                        <path
-                                            d="M16.28 14.963L12 17.423l-4.284-2.46V10.04l4.283-2.463 4.28 2.463-1.781 1.025-2.499-1.438-2.498 1.438v2.87l2.498 1.438 2.499-1.438 1.781 1.028z"
-                                            fill="#002D74"></path>
-                                    </g>
-                                    <defs>
-                                        <linearGradient id="cro_svg__paint0_linear_10116_96806" x1="16.584" y1="23.042"
-                                            x2="16.584" y2="12.5" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#002D74"></stop>
-                                            <stop offset="1" stop-color="#002D74" stop-opacity="0"></stop>
-                                        </linearGradient>
-                                        <linearGradient id="cro_svg__paint1_linear_10116_96806" x1="7.417" y1="1.959"
-                                            x2="7.417" y2="12.5" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#002D74"></stop>
-                                            <stop offset="1" stop-color="#002D74" stop-opacity="0"></stop>
-                                        </linearGradient>
-                                        <clipPath id="cro_svg__clip0_10116_96806">
-                                            <path fill="currentColor" transform="translate(1 1.5)" d="M0 0h22v22H0z">
+
+                            <div class="price_alerts_card">
+                                <div>
+                                    <svg class="coin" width="1em" height="1em" viewBox="0 0 24 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#dot_svg__clip0_10116_96791)" fill="#E6007A">
+                                            <path
+                                                d="M11.999 5.534c2.542 0 4.602-1.127 4.602-2.517S14.541.5 12 .5C9.457.5 7.396 1.627 7.396 3.017S9.457 5.534 12 5.534zM11.999 24.498c2.542 0 4.602-1.127 4.602-2.517s-2.06-2.517-4.602-2.517c-2.542 0-4.603 1.127-4.603 2.517S9.457 24.498 12 24.498zM5.585 9.018c1.27-2.07 1.263-4.312-.019-5.007-1.28-.696-3.35.419-4.62 2.488-1.271 2.07-1.263 4.312.018 5.007 1.281.696 3.35-.418 4.62-2.488zM23.05 18.499c1.27-2.07 1.263-4.311-.017-5.006-1.28-.696-3.349.419-4.62 2.489-1.27 2.07-1.263 4.31.017 5.006 1.28.695 3.349-.42 4.62-2.49zM5.567 20.988c1.282-.696 1.29-2.938.019-5.008-1.271-2.07-3.34-3.183-4.62-2.488-1.282.696-1.29 2.937-.02 5.007 1.272 2.07 3.34 3.184 4.621 2.489zM23.035 11.507c1.28-.695 1.287-2.936.017-5.006-1.271-2.07-3.34-3.184-4.62-2.49-1.28.696-1.287 2.937-.017 5.007 1.271 2.07 3.34 3.184 4.62 2.489z">
                                             </path>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="dot_svg__clip0_10116_96791">
+                                                <rect y="0.5" width="24" height="24" rx="12" fill="currentColor"></rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>
+                                        <h6>Polkadot</h6>
+                                        <p>DOT</p>
+                                    </div>
+                                </div>
                                 <div>
-                                    <h6>Cronos</h6>
-                                    <p>CRO</p>
+                                    <div class="coin_price">
+                                        <h4>$9.98</h4>
+                                        <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
+                                            </svg> 13.36%</h5>
+                                    </div>
                                 </div>
                             </div>
-                            <div>
-                                <div class="coin_price">
-                                    <h4>$0.191230</h4>
-                                    <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
-                                        </svg> 7.1%</h5>
+
+                            <div class="price_alerts_card last_card">
+                                <div>
+                                    <svg class="coin" width="1em" height="1em" viewBox="0 0 24 25" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect y="0.5" width="24" height="24" rx="12" fill="currentColor"></rect>
+                                        <path
+                                            d="M12 .5l5.22 2.959L22.392 6.5l.048 6-.048 6-5.172 3.041L12 24.5l-5.22-2.959L1.608 18.5l-.048-6 .048-6L6.78 3.459 12 .5z"
+                                            fill="currentColor"></path>
+                                        <g clip-path="url(#cro_svg__clip0_10116_96806)">
+                                            <path
+                                                d="M12.003 1.958l-9.17 5.273v10.542l9.17 5.269 9.163-5.27V7.233l-9.163-5.274zm6.448 14.253l-6.448 3.707-6.452-3.707V8.79l6.452-3.708 6.448 3.708v7.42z"
+                                                fill="#002D74"></path>
+                                            <path
+                                                d="M12.003 23.042l9.163-5.27V7.233l-9.163-5.274v3.128l6.448 3.707v7.421l-6.448 3.704v3.124z"
+                                                fill="url(#cro_svg__paint0_linear_10116_96806)"
+                                                style="mix-blend-mode: multiply;"></path>
+                                            <path
+                                                d="M11.998 1.959L2.835 7.228v10.541l9.163 5.273v-3.128L5.55 16.207v-7.42l6.448-3.704V1.959z"
+                                                fill="url(#cro_svg__paint1_linear_10116_96806)"
+                                                style="mix-blend-mode: multiply;"></path>
+                                            <path
+                                                d="M16.28 14.963L12 17.423l-4.284-2.46V10.04l4.283-2.463 4.28 2.463-1.781 1.025-2.499-1.438-2.498 1.438v2.87l2.498 1.438 2.499-1.438 1.781 1.028z"
+                                                fill="#002D74"></path>
+                                        </g>
+                                        <defs>
+                                            <linearGradient id="cro_svg__paint0_linear_10116_96806" x1="16.584"
+                                                y1="23.042" x2="16.584" y2="12.5" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#002D74"></stop>
+                                                <stop offset="1" stop-color="#002D74" stop-opacity="0"></stop>
+                                            </linearGradient>
+                                            <linearGradient id="cro_svg__paint1_linear_10116_96806" x1="7.417"
+                                                y1="1.959" x2="7.417" y2="12.5" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#002D74"></stop>
+                                                <stop offset="1" stop-color="#002D74" stop-opacity="0"></stop>
+                                            </linearGradient>
+                                            <clipPath id="cro_svg__clip0_10116_96806">
+                                                <path fill="currentColor" transform="translate(1 1.5)"
+                                                    d="M0 0h22v22H0z">
+                                                </path>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <div>
+                                        <h6>Cronos</h6>
+                                        <p>CRO</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="coin_price">
+                                        <h4>$0.191230</h4>
+                                        <h5><svg width="1em" height="1em" viewBox="0 0 10 11" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5 2.475l4.166 6.667H.833L5 2.475z" fill="#00A68C"></path>
+                                            </svg> 7.1%</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1272,17 +1282,19 @@
                         <img src="assets/images/main crypto journey/on-chain-staking.webp" alt="on-chain staking coin">
                     </div>
                 </div>
-                <div class="join">
-                    <div>
-                        <p>Join our <span>100M+ users</span></p>
-                        <h3>Get started today</h2>
-                    </div>
-                    <div class="qr_code">
-                        <h4 dir="rtl"><span>scan</span> to download<br>
-                            the app</h3>
-                        <img src="assets/images/main crypto journey/app-qr-code86x86.webp" alt="app QR code">
-                    </div>
+            </div>
+            
+            <div class="join">
+                <div>
+                    <p>Join our <span>100M+ users</span></p>
+                    <h3>Get started today</h2>
                 </div>
+                <div class="qr_code">
+                    <h4 dir="rtl"><span>scan</span> to download<br>
+                        the app</h3>
+                        <img src="assets/images/main crypto journey/app-qr-code86x86.webp" alt="app QR code">
+                </div>
+            </div>
             </div>
         </section>
         <!-- end crypto_journey -->
@@ -1589,14 +1601,16 @@
             <div class="top">
                 <div><img src="assets/images/footer information/cdc_logo.svg" alt="logo"></div>
                 <div class="line"></div>
-                <img src="assets/images/footer information/1-twitter.svg" alt="twitter">
-                <img src="assets/images/footer information/2-instagram.svg" alt="instagram">
-                <img src="assets/images/footer information/3-threads.svg" alt="threads">
-                <img src="assets/images/footer information/4-facebook.svg" alt="facebook">
-                <img src="assets/images/footer information/5-discord.svg" alt="discord">
-                <img src="assets/images/footer information/5-linkedin.svg" alt="linkedin">
-                <img src="assets/images/footer information/6-reddit.svg" alt="reddit">
-                <img src="assets/images/footer information/7-telegram.svg" alt="telegram">
+                <div class="information_images">
+                    <img src="assets/images/footer information/1-twitter.svg" alt="twitter">
+                    <img src="assets/images/footer information/2-instagram.svg" alt="instagram">
+                    <img src="assets/images/footer information/3-threads.svg" alt="threads">
+                    <img src="assets/images/footer information/4-facebook.svg" alt="facebook">
+                    <img src="assets/images/footer information/5-discord.svg" alt="discord">
+                    <img src="assets/images/footer information/5-linkedin.svg" alt="linkedin">
+                    <img src="assets/images/footer information/6-reddit.svg" alt="reddit">
+                    <img src="assets/images/footer information/7-telegram.svg" alt="telegram">
+                </div>
             </div>
 
             <div class="middle"> <!-- TODO RESPONSIVE QUESTION -->
@@ -1698,7 +1712,7 @@
                         services on the Crypto.com App in certain jurisdictions due to potential or actual regulatory
                         restrictions.</h5>
                 </div>
-                <div>
+                <div >
                     <img src="assets/images/footer information/middle/AICPA.webp" alt="">
                     <img src="assets/images/footer information/middle/PCI.webp" alt="">
                     <img src="assets/images/footer information/middle/SGS22301.webp" alt="">

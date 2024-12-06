@@ -47,7 +47,7 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .show {
@@ -78,6 +78,7 @@ body {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
 /* end normalization */
 
 /* start header */
@@ -164,6 +165,21 @@ body {
   color: var(--light-clr);
   padding: 10px 15px;
   outline: none;
+  position: relative;
+}
+
+.navbar nav button .nav_btn_onclick img {
+  width: 100%;
+  height: inherit;
+  object-fit: contain;
+
+  border: 1.5px solid rgba(17, 153, 249, 0.5);
+  border-radius: 20px;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:40px;
 }
 .navbar nav button:hover {
   background-color: var(--hover-clr);
@@ -316,6 +332,15 @@ body {
 }
 .hero_items button:hover {
   cursor: pointer;
+}
+.hero_items_qr img {
+  width: 60%;
+  height: inherit;
+  object-fit: contain;
+
+  border: 1.5px solid var(--light-clr);
+  border-radius: 20px;
+  padding: 10px;
 }
 /* end hero_items */
 
@@ -554,7 +579,7 @@ main > p {
 }
 .buy_crypto {
   max-width: 500px;
-  max-height: 330px;
+  max-height: 300px;
 }
 .crypto_journey_cards img {
   width: 100%;
@@ -587,8 +612,12 @@ main > p {
   display: flex;
   justify-content: space-between;
 }
-.price_alerts,
 .recurring_buy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.price_alerts {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -598,7 +627,11 @@ main > p {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(244, 244, 244, 0.3);
-  padding-bottom: 20px;
+  padding: 20px 5px;
+}
+.price_alerts_card:hover {
+  cursor: pointer;
+  background-color: #ffffff20;
 }
 .last_card {
   border: none !important;
@@ -639,6 +672,7 @@ main > p {
 
 .join {
   grid-column: span 2;
+  width: 100%;
   height: 100px;
   border-radius: 24px;
   background-color: var(--light-clr);
@@ -881,7 +915,7 @@ footer {
 
 /* start information */
 /* start information top*/
-.information > div.top {
+.information > .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -893,12 +927,12 @@ footer {
   height: 2px;
   background-color: rgba(244, 244, 244, 0.3);
 }
-.information > div > img {
+.information .information_images img {
   border: 1px solid rgba(244, 244, 244, 0.3);
   border-radius: 50%;
   object-fit: contain;
 }
-.information > div > img:hover {
+.information .information_images img:hover {
   border: 1px solid rgb(244, 244, 244);
   cursor: pointer;
 }
@@ -987,12 +1021,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 150px;
+  
   padding: 20px 5%;
-}
-.bottom {
   border-bottom: 1px solid rgba(244, 244, 244, 0.3);
 }
+
 .bottom img {
   width: 50px;
   height: 50px;
@@ -1005,6 +1038,7 @@ footer {
   opacity: 0.8;
 }
 /* end information bottom */
+
 /* start information copy_right */
 .information > div.copy_right {
   display: flex;
@@ -1022,9 +1056,9 @@ footer {
 /* end footer */
 
 /* start responsive */
+
 /* start responsive menu */
 .responsive_menu {
-  /* TODO */
   height: 100vh;
   background-color: var(--bg-clr2);
   overflow: scroll;
@@ -1125,7 +1159,6 @@ footer {
 
 /* start get_started */
 .get_started {
-  /* TODO */
   background-color: var(--bg-clr2);
   height: 70px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1162,9 +1195,9 @@ footer {
   cursor: pointer;
 }
 /* end get_started */
+
 /* start mega_menu_responsive */
 .mega_menu_responsive {
-  /* TODO mega_menu_responsive */
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -1240,6 +1273,7 @@ footer {
   font-size: var(--font-xx-small);
 }
 /* end mega_menu_responsive */
+
 @media screen and (max-width: 1130px) {
   body {
     font-size: 14px;
@@ -1257,6 +1291,7 @@ footer {
   .hero_items {
     margin-top: 150px;
   }
+  .hero_items_qr ,
   .hero_items button {
     display: none;
   }
@@ -1281,7 +1316,7 @@ footer {
   .defi .defi_btn1 {
     display: none;
   }
-
+  .information .bottom,
   .questions {
     flex-direction: column;
   }
@@ -1303,12 +1338,72 @@ footer {
   .logo {
     display: block;
   }
+  .price_card svg,
+  .price_card h5,
   .geolocation,
   .lion_logo {
     display: none;
   }
   .navbar nav div ul {
     display: none !important;
+  }
+ 
+
+  .price_table .price_card {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .price_card h6 {
+    grid-column: 2/3;
+    direction: rtl;
+  }
+  .price_card P {
+    direction: rtl;
+  }
+  .crypto_journey_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .crypto_journey {
+    padding: 100px 5%;
+  }
+  .buy_crypto {
+    max-width: 100%;
+  }
+  .crypto_journey_cards img {
+    width: 70%;
+    float: right;
+  }
+  .recurring_buy > div.recurring_buy_image {
+    text-align: center;
+  }
+  .recurring_buy img {
+    margin-top: 40px;
+    float: none;
+  }
+  .join {
+    justify-content: center;
+  }
+
+  .defi {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .defi div {
+    text-align: center;
+  }
+  .defi img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .nav_btn p {
+    display: none;
+  }
+  .crypto_basket {
+    padding: 0 0;
   }
   .crypto_basket_main {
     display: none;
@@ -1329,44 +1424,18 @@ footer {
   main > p {
     margin-top: 100px;
   }
-  .price_table .price_card {
-    grid-template-columns: repeat(2,1fr);
+  .information .middle {
+    display: none !important;
   }
-  .price_card svg,
-  .price_card h5 {
-    display: none;
-  }
-  .price_card h6 {
-    grid-column: 2/3;
-    direction: rtl;
-  }
-  .price_card P {
-    direction: rtl;
-  }
-  .crypto_journey_cards {
-    display: flex;
+  .information .top,
+  .bottom,
+  .copy_right {
     flex-direction: column;
-    gap: 20px;
+    align-items: start !important;
   }
-  .buy_crypto {
-    max-width: 100%;
+  .copy_right h6 {
+    padding-bottom: 10px;
   }
-  .defi {
-    flex-direction: column;
-    gap: 50px;
-  }
-  .defi div {
-    text-align: center;
-  }
-  .defi img {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-@media screen and (max-width: 770px) {
-  .nav_btn p {
-    display: none;
-  }
+  
 }
 /* end responsive */

@@ -15,6 +15,18 @@ window.addEventListener("scroll", () => {
 });
 /* scroll */
 
+/* button .nav_btn */
+const navBtn = document.querySelector('.navbar nav button')
+const navBtnDiv = document.querySelector('.nav_btn')
+const navBtnOnclickDiv = document.querySelector('.nav_btn_onclick')
+
+navBtn.addEventListener('click',()=>{
+  navBtnDiv.classList.toggle('hide')
+  navBtnOnclickDiv.classList.toggle('hide')
+})
+
+/* button .nav_btn */
+
 /* responsive menu */
 /* mega_menu_responsive */
 const responsiveMenuEl = document.querySelector(".responsive_menu");
@@ -57,6 +69,21 @@ backIconEls.forEach((e, index) =>
 );
 /* mega_menu_responsive */
 /* responsive menu */
+
+/* hero_item_btn */
+const heroItemsBtn = document.querySelector('.hero_items button')
+const heroItemsQr = document.querySelector('.hero_items_qr')
+
+heroItemsBtn.addEventListener('click', ()=>{
+  heroItemsQr.classList.toggle('hide')
+  heroItemsBtn.classList.toggle('hide')
+})
+
+heroItemsQr.addEventListener('click', ()=>{
+  heroItemsBtn.classList.toggle('hide')
+  heroItemsQr.classList.toggle('hide')
+})
+/* hero_item_btn */
 
 /* hero_floating */
 const heroFloating = document.querySelector(".hero_floating");
