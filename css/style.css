@@ -1485,10 +1485,5 @@ footer {
   .copy_right h6 {
     padding-bottom: 10px;
   }
-  /* .information_images {
-    display: grid !important;
-    grid-template-columns: repeat(4,1fr);
-    justify-content: space-between;
-  } */
 }
 /* end responsive */
