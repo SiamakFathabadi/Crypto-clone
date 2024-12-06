@@ -942,17 +942,15 @@ footer {
   object-fit: contain;
 }
 /* end information top*/
+
 /* start information middle */
 .information > div.middle {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /* justify-content: space-between; */
-  /* align-items: center; */
   padding: 50px 5%;
-  /* align-items: flex-start; */
 }
 
-.information > div > ul > li {
+.information > div.middle > ul > li {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1016,6 +1014,53 @@ footer {
   padding-top: 40px !important;
 }
 /* end information middle */
+
+/* start information middle_responsive */
+.middle_responsive ul {
+  padding: 20px;
+}
+.middle_responsive div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.middle_responsive h5 {
+  font-size: var(--font-pre-medium);
+  color: var(--light-clr);
+}
+.middle_responsive svg {
+  fill: var(--light-clr);
+  width: 20px;
+  height: 20px;
+  transition: all .3s ease-in-out;
+}
+.middle_responsive p,
+.middle_responsive a {
+  font-size: var(--font-small) !important;
+}
+.middle_responsive ul li{
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+}
+.middle_responsive ul:hover li {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  padding: 10px 0;
+}
+.middle_responsive ul:hover svg {
+  transform: rotateZ(90deg);
+}
+
+/* .middle_responsive li {
+  display: none !important;
+} */
+/* end information middle_responsive */
+
 /* start information bottom */
 .information > div.bottom {
   display: flex;
@@ -1056,7 +1101,6 @@ footer {
 /* end footer */
 
 /* start responsive */
-
 /* start responsive menu */
 .responsive_menu {
   height: 100vh;
@@ -1070,8 +1114,7 @@ footer {
   right: 0;
   top: 0;
   z-index: 10001;
-
-  /* display: none; */
+  
   transition: all 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -1168,8 +1211,7 @@ footer {
   left: 200%;
   right: 0;
   z-index: 10002;
-
-  /* display: none; */
+  
   transition: all 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -1347,8 +1389,6 @@ footer {
   .navbar nav div ul {
     display: none !important;
   }
- 
-
   .price_table .price_card {
     grid-template-columns: repeat(2,1fr);
   }
@@ -1384,7 +1424,6 @@ footer {
   .join {
     justify-content: center;
   }
-
   .defi {
     flex-direction: column;
     gap: 50px;
