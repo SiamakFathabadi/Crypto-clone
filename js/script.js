@@ -16,14 +16,14 @@ window.addEventListener("scroll", () => {
 /* scroll */
 
 /* button .nav_btn */
-const navBtn = document.querySelector('.navbar nav button')
-const navBtnDiv = document.querySelector('.nav_btn')
-const navBtnOnclickDiv = document.querySelector('.nav_btn_onclick')
+const navBtn = document.querySelector(".navbar nav button");
+const navBtnDiv = document.querySelector(".nav_btn");
+const navBtnOnclickDiv = document.querySelector(".nav_btn_onclick");
 
-navBtn.addEventListener('click',()=>{
-  navBtnDiv.classList.toggle('hide')
-  navBtnOnclickDiv.classList.toggle('hide')
-})
+navBtn.addEventListener("click", () => {
+  navBtnDiv.classList.toggle("hide");
+  navBtnOnclickDiv.classList.toggle("hide");
+});
 
 /* button .nav_btn */
 
@@ -70,19 +70,33 @@ backIconEls.forEach((e, index) =>
 /* mega_menu_responsive */
 /* responsive menu */
 
+/* hero_slider */
+const heroImages = [...document.querySelectorAll(".slider img")];
+let activeIndex = 0;
+const sliderFunc = () => {
+  heroImages[activeIndex].classList.remove("active");
+  activeIndex++;
+  if (activeIndex >= heroImages.length) {
+    activeIndex = 0;
+  }
+  heroImages[activeIndex].classList.add("active");
+};
+setInterval(sliderFunc, 3000);
+/* hero_slider */
+
 /* hero_item_btn */
-const heroItemsBtn = document.querySelector('.hero_items button')
-const heroItemsQr = document.querySelector('.hero_items_qr')
+const heroItemsBtn = document.querySelector(".hero_items button");
+const heroItemsQr = document.querySelector(".hero_items_qr");
 
-heroItemsBtn.addEventListener('click', ()=>{
-  heroItemsQr.classList.toggle('hide')
-  heroItemsBtn.classList.toggle('hide')
-})
+heroItemsBtn.addEventListener("click", () => {
+  heroItemsQr.classList.toggle("hide");
+  heroItemsBtn.classList.toggle("hide");
+});
 
-heroItemsQr.addEventListener('click', ()=>{
-  heroItemsBtn.classList.toggle('hide')
-  heroItemsQr.classList.toggle('hide')
-})
+heroItemsQr.addEventListener("click", () => {
+  heroItemsBtn.classList.toggle("hide");
+  heroItemsQr.classList.toggle("hide");
+});
 /* hero_item_btn */
 
 /* hero_floating */

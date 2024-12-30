@@ -79,6 +79,10 @@ body {
   visibility: visible !important;
 }
 
+.active {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
 /* end normalization */
 
 /* start header */
@@ -179,7 +183,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top:40px;
+  top: 40px;
 }
 .navbar nav button:hover {
   background-color: var(--hover-clr);
@@ -274,6 +278,20 @@ body {
 /* end mega_menu */
 /* end navbar */
 /* start hero_section  */
+/* start hero_slider */
+.slider img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -5;
+  filter: brightness(40%) blur(2px);
+
+  opacity: 0;
+  visibility: hidden;
+}
+/* end hero_slider */
 /* start hero_items */
 .hero_items {
   text-align: center;
@@ -1039,17 +1057,17 @@ footer {
   fill: var(--light-clr);
   width: 20px;
   height: 20px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .middle_responsive p,
 .middle_responsive a {
   font-size: var(--font-small) !important;
 }
-.middle_responsive ul li{
+.middle_responsive ul li {
   height: 0;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .middle_responsive ul:hover li {
   opacity: 1;
@@ -1070,7 +1088,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   padding: 20px 5%;
   border-bottom: 1px solid rgba(244, 244, 244, 0.3);
 }
@@ -1118,7 +1136,7 @@ footer {
   right: 0;
   top: 0;
   z-index: 10001;
-  
+
   transition: all 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -1215,7 +1233,7 @@ footer {
   left: 200%;
   right: 0;
   z-index: 10002;
-  
+
   transition: all 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -1337,7 +1355,7 @@ footer {
   .hero_items {
     margin-top: 150px;
   }
-  .hero_items_qr ,
+  .hero_items_qr,
   .hero_items button {
     display: none;
   }
@@ -1394,7 +1412,7 @@ footer {
     display: none !important;
   }
   .price_table .price_card {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .price_card h6 {
     grid-column: 2/3;
@@ -1459,7 +1477,7 @@ footer {
   .crypto_basket_items {
     top: 80%;
     left: 50%;
-    
+
     transform: translate(-50%, -50%);
     z-index: 1;
     text-align: center;
