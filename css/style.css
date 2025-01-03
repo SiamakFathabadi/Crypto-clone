@@ -6,7 +6,7 @@
   text-decoration: none;
   list-style: none;
 }
-:root {
+:root  {
   --font-large: 4em;
   --font-medium-large: 3em;
   --font-medium: 2em;
@@ -30,7 +30,6 @@
   --light-clr: #f7f9fa;
 
   --hover-clr: #23273a;
-
   --padding-totally: 0 5%;
 }
 
@@ -40,6 +39,26 @@ body {
   background-color: var(--bg-clr);
   overflow-x: hidden;
 }
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-clr);
+  border-radius: 1px;
+
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--second-clr);
+} 
 
 .fix_space {
   height: 70px;
