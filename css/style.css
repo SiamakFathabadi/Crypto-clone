@@ -824,7 +824,63 @@ main > p {
   cursor: pointer;
 }
 /* end defi */
+/* TODO */
+/* start slider-crypto */
+.slider-crypto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
+swiper-container {
+  width: 240px;
+  height: 240px;
+}
 
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+swiper-slide:nth-child(1n) {
+  background-color: rgba(3, 31, 67, 1);
+}
+
+swiper-slide:nth-child(2n) {
+  background-color: rgba(3, 31, 67, 0.9);
+}
+swiper-slide:nth-child(3n) {
+  background-color: rgba(3, 31, 67, 0.8);
+}
+
+swiper-slide:nth-child(4n) {
+  background-color: rgba(3, 31, 67, 0.7);
+}
+swiper-slide:nth-child(5n) {
+  background-color: rgba(3, 31, 67, 0.6);
+}
+
+swiper-slide:nth-child(6n) {
+  background-color: rgba(3, 31, 67, 0.5);
+}
+swiper-slide:nth-child(7n) {
+  background-color: rgba(3, 31, 67, 0.4);
+}
+swiper-slide:nth-child(8n) {
+  background-color: rgba(3, 31, 67, 0.3);
+}
+swiper-slide:nth-child(9n) {
+  background-color: rgba(3, 31, 67, 0.2);
+}
+swiper-slide:nth-child(10n) {
+  background-color: rgba(3, 31, 67, 0.1);
+} 
+/* end slider-crypto */
 /* start cryptocurrency */
 .cryptocurrency {
   padding: 100px 15%;
@@ -1361,7 +1417,7 @@ footer {
 /* end mega_menu_responsive */
 
 /* start loginPage */
-.log_out{
+.log_out {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1372,16 +1428,16 @@ footer {
   flex-direction: column;
   overflow: hidden;
   width: 500px;
-min-height: 200px;
-padding: 20px 40px;
+  min-height: 200px;
+  padding: 20px 40px;
   box-shadow: 0 5px 10px rgba(255, 255, 255, 0.9),
     0 10px 15px rgba(255, 255, 255, 0.6), 0 15px 20px rgba(255, 255, 255, 0.3),
     0 20px 25px rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 .log_out button {
   width: 100%;
@@ -1448,7 +1504,7 @@ form.sign_in section a {
 form.sign_in a:hover {
   opacity: 1;
 }
-.log_out h2 ,
+.log_out h2,
 form.sign_in h2 {
   color: var(--light-clr);
   font-size: var(--font-medium);
@@ -1469,7 +1525,7 @@ form.sign_in .top button:hover {
   color: var(--fifth-clr);
   background-color: var(--light-clr);
 }
-.log_out button ,
+.log_out button,
 form.sign_in .middle button {
   border: none;
   border-radius: 40px;
@@ -1481,7 +1537,7 @@ form.sign_in .middle button {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.log_out button:hover ,
+.log_out button:hover,
 form.sign_in .middle button:hover {
   background-color: var(--fifth-clr);
 }
