@@ -6,7 +6,7 @@
   text-decoration: none;
   list-style: none;
 }
-:root  {
+:root {
   --font-large: 4em;
   --font-medium-large: 3em;
   --font-medium: 2em;
@@ -34,12 +34,12 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 body {
   font-family: Roboto, sans-serif;
   background-color: var(--bg-clr);
   overflow-x: hidden;
 }
-
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -58,7 +58,7 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--second-clr);
-} 
+}
 
 .fix_space {
   height: 70px;
@@ -310,7 +310,7 @@ body {
 
   opacity: 0;
   visibility: hidden;
-  
+
   transition: all 0.5s ease-in-out;
 }
 /* end hero_slider */
@@ -1360,6 +1360,132 @@ footer {
 }
 /* end mega_menu_responsive */
 
+/* start loginPage */
+.log_out{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--fourth-clr);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 500px;
+min-height: 200px;
+padding: 20px 40px;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.9),
+    0 10px 15px rgba(255, 255, 255, 0.6), 0 15px 20px rgba(255, 255, 255, 0.3),
+    0 20px 25px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.log_out button {
+  width: 100%;
+}
+form.sign_in {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--fourth-clr);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 500px;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.9),
+    0 10px 15px rgba(255, 255, 255, 0.6), 0 15px 20px rgba(255, 255, 255, 0.3),
+    0 20px 25px rgba(255, 255, 255, 0.1);
+}
+form.sign_in > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 40px;
+}
+form.sign_in .top {
+  background-color: var(--second-clr);
+  align-items: center;
+  gap: 10px;
+}
+form.sign_in section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+form.sign_in section div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+form.sign_in input {
+  border-radius: 40px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: var(--font-xs-small);
+}
+form.sign_in label {
+  font-size: var(--font-xs-small);
+  color: var(--fifth-clr);
+}
+form.sign_in div a {
+  color: var(--light-clr);
+  font-size: var(--font-xs-small);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+form.sign_in section a {
+  color: var(--fifth-clr);
+  font-size: var(--font-xs-small);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+form.sign_in a:hover {
+  opacity: 1;
+}
+.log_out h2 ,
+form.sign_in h2 {
+  color: var(--light-clr);
+  font-size: var(--font-medium);
+  font-weight: bolder;
+}
+form.sign_in .top button {
+  border: 1.5px solid var(--light-clr);
+  border-radius: 40px;
+  font-size: var(--font-xs-small);
+  background-color: transparent;
+  color: var(--light-clr);
+  padding: 15px 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+form.sign_in .top button:hover {
+  color: var(--fifth-clr);
+  background-color: var(--light-clr);
+}
+.log_out button ,
+form.sign_in .middle button {
+  border: none;
+  border-radius: 40px;
+  font-size: var(--font-xs-small);
+  background-color: var(--second-clr);
+  color: var(--light-clr);
+  padding: 15px 20px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.log_out button:hover ,
+form.sign_in .middle button:hover {
+  background-color: var(--fifth-clr);
+}
+/* end loginPage */
 @media screen and (max-width: 1130px) {
   body {
     font-size: 14px;
