@@ -1,5 +1,5 @@
 "use strick";
-/* loginPage */
+/* loginPage */  /* fakeStore api */
 const signinForm = document.querySelector(".sign_in");
 const usernameEl = document.querySelector("#username");
 const passwordEl = document.querySelector("#password");
@@ -30,7 +30,7 @@ signinForm.addEventListener("submit", async (e) => {
     signinForm.classList.add("hide");
     logoutEl.classList.remove("hide");
     localStorage.setItem("token", data.token);
-    window.location.href = "/index.html";  /* TODO */
+    window.location.href = "/index.html";  
   } catch (err) {
     alert(err);
   }
@@ -42,3 +42,5 @@ logoutBtn.addEventListener('click',()=>{
     localStorage.removeItem("token");
 })
 /* loginPage */
+// username: "mor_2314"
+// password: "83r5^_"

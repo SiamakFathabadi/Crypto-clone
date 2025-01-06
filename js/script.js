@@ -1,5 +1,5 @@
 "use strick";
-/* scroll */
+/* scroll */ /* sections appear and disappear */
 const sectionEls = [...document.querySelectorAll("section")];
 
 sectionEls.slice(3, -2).forEach((e) => e.classList.add("fade-up"));
@@ -70,7 +70,7 @@ backIconEls.forEach((e, index) =>
 /* mega_menu_responsive */
 /* responsive menu */
 
-/* hero_slider */
+/* hero_slider */ /* background-hero-section */
 const heroImages = [...document.querySelectorAll(".slider img")];
 let activeIndex = 0;
 const sliderFunc = () => {
@@ -99,31 +99,30 @@ heroItemsQr.addEventListener("click", () => {
 });
 /* hero_item_btn */
 
-/* hero_floating */
+/* hero_floating */ /* phone */
 const heroFloating = document.querySelector(".hero_floating");
 const phoneFloating = document.querySelector(".phone_floating");
 
 heroFloating.addEventListener("mousemove", (e) => {
   const rect = heroFloating.getBoundingClientRect();
-  const x = e.clientX - rect.left; // X position inside the container
-  const y = e.clientY - rect.top; // Y position inside the container
+  const x = e.clientX - rect.left; 
+  const y = e.clientY - rect.top; 
 
-  const centerX = rect.width / 2; // Center X of the container
-  const centerY = rect.height / 2; // Center Y of the container
+  const centerX = rect.width / 2; 
+  const centerY = rect.height / 2; 
 
-  const rotateX = ((y - centerY) / centerY) * 10; // Rotate based on Y-axis
-  const rotateY = ((x - centerX) / centerX) * -10; // Rotate based on X-axis
+  const rotateX = ((y - centerY) / centerY) * 10; 
+  const rotateY = ((x - centerX) / centerX) * -10;  
 
-  phoneFloating.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(20px)`;
+  phoneFloating.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(30px)`;
 });
 
 heroFloating.addEventListener("mouseleave", () => {
-  // Reset the phone to its default position when the mouse leaves
   phoneFloating.style.transform = "rotateX(0) rotateY(0) translateZ(0)";
 });
 /* hero_floating */
 
-/* questions */
+/* questions */ /* footer-questions */
 const questionsBoxesEl = [...document.querySelectorAll(".questions_box .top")];
 const SvgPlusEls = [...document.querySelectorAll(".plus")];
 const SvgMinusEls = [...document.querySelectorAll(".minus")];
